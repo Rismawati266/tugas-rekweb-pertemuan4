@@ -1,12 +1,41 @@
 <?php
 
 	class App {
+		protected $controller = 'Home';
+		protected $method = 'index';
+		protected $params = [];
+
 		public function __construct() {
-			$url = $this->parsURL();
-			var_dump($url);
+
+			$url = $this->parseURL();
+
+			if(file_exists('../app/controllers/' . $url[0] . '.php') ) {
+				$this->controller = $url[0];
+				unset($url[0]);
+			}
+
+			// controller
+			require_once '../app/controllers/' . $this->controller . '.php';
+			$this->controller = new $this->controller; // kelasnnya di instansiasi
+
+			// method
+			if( isset($url[1]) ) {
+				if( method_exsits($this->controller, $url[1]) ) {
+					$this->method = $url[1];
+					unset($url[1]);
+				}
+			}
+
+
+			// kelola parameter
+			if( !empty($url) ) {
+				var_dump($url);
+			}
+
+
 		}
 
-		public function parsURL() {
+		public function parseURL() {
 			if( isset($_GET['url']) ) {
 				$url = rtrim($_GET['url'], '/');
 				$url = filter_var($url, FILTER_SANITIZE_URL);
