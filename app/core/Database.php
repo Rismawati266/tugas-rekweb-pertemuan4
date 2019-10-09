@@ -60,6 +60,9 @@
 			return $this->stmt->fetchAll(PDO::FETCH_ASSOC); // jika ingin banyak datanya
 		}
 
-
+		public function single() {
+			$this->execute();
+			return $this->stmt->fetch(PDO::FETCH_ASSOC); // jika ingin satu. jadi datanya cuman satu
+		}
 
 	}
