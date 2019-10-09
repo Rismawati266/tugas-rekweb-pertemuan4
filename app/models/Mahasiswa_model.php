@@ -34,7 +34,7 @@ class Mahasiswa_model {
 		return $this->db->single();
 	}
 
-	public function tanbahDataMahasiswa($data) {
+	public function tambahDataMahasiswa($data) {
 		$query = "INSERT INTO mahasiswa
 					VALUES
 					('', :nama, :nrp, :email, :jurusan)";
