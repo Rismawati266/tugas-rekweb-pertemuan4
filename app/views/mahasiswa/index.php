@@ -17,8 +17,8 @@
 				<?php foreach( $data['mhs'] as $mhs ) : ?>
   				<li class="list-group-item">
   					<?= $mhs['nama']; ?>
+  					<a href="<?= BASEURL; ?>/mahasiswa/hapus/<?= $mhs['id']; ?>" class="badge badge-danger float-right ml-2">Hapus</a>
   					<a href="<?= BASEURL; ?>/mahasiswa/detail/<?= $mhs['id']; ?>" class="badge badge-warning float-right ml-2">Detail</a>
-  					<a href="<?= BASEURL; ?>/mahasiswa/hapus/<?= $mhs['id']; ?>" class="badge badge-warning float-right ml-2">Hapus</a>
   				</li>
   				<?php endforeach; ?>
 			</ul>
