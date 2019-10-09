@@ -5,4 +5,8 @@
 		private $user = DB_USER;
 		private $pass = DB_PASS;
 		private $db_name = DB_NAME;
+
+		// variabel untuk koneksinya
+		private $dbh;
+		private $stmt;
 	}
