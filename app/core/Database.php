@@ -30,4 +30,24 @@
 		public function query($query) {// buat untuk jenerik. Querynya bisa di pake apapun, baik itu select, updatde, delete, insert. Inilah tujuan membuat database Wrapper supaya bisa di pakai secara fleksibel
 			$this->stmt = $this->dbh->prepare($query);
 		}
+
+		public function bind($param, $value, $type = null) {
+			if( is_null($type) ) {
+				switch ( true ) { // SUPAYA SWITCHNYA JALAN
+					case is_int($value): // VALUENYA INTEGER
+						$type = PDO::PARAM_INT;
+						break;
+					case is_bool($value): // VALUENYA BOOLEAN
+						$type = PDO::PARAM_BOOL;
+						break;
+					case is_null($value): // VALUENYA NULL
+						$type = PDO::PARAM_NULL;
+						break;
+					default : // selain dari itu typenya kita asumsikan String
+						$type = PDO::PARAM_STR;
+				}
+			}
+
+			$this->stmt->bindValue($param, $value, $type);
+		}
 	}
