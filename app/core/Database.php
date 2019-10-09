@@ -50,4 +50,9 @@
 
 			$this->stmt->bindValue($param, $value, $type);
 		}
+
+		public function execute() { // eksekusi
+			$this->stmt->execute();
+		}
+
 	}
