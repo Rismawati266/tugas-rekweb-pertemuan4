@@ -65,4 +65,7 @@
 			return $this->stmt->fetch(PDO::FETCH_ASSOC); // jika ingin satu. jadi datanya cuman satu
 		}
 
+		public function rowCount() { // menghitung baris
+			return $this->stmt->rowCount();
+		}
 	}
