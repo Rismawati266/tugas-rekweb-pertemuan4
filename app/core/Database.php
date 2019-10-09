@@ -55,4 +55,11 @@
 			$this->stmt->execute();
 		}
 
+		public function resultSet() {
+			$this->execute();
+			return $this->stmt->fetchAll(PDO::FETCH_ASSOC); // jika ingin banyak datanya
+		}
+
+
+
 	}
