@@ -2,7 +2,7 @@
 
 	class Database {
 		private $host = DB_HOST;
-		private $host = DB_USER;
-		private $host = DB_PASS;
-		private $host = DB_NAME;
+		private $user = DB_USER;
+		private $pass = DB_PASS;
+		private $db_name = DB_NAME;
 	}
