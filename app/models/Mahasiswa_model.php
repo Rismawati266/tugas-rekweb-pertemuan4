@@ -24,7 +24,7 @@ class Mahasiswa_model {
 
 
 	public function getAllMahasiswa() {
-		$this->db->query(' SELECT * FROM ' . $tis->table);
+		$this->db->query(' SELECT * FROM ' . $this->table);
 		return $this->db->resultSet(); // tampilkan semua datanya
 	}
 

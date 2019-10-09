@@ -17,7 +17,7 @@
 			// $option -> mengoptimasi koneksi ke database kita
 			$option = [
 				PDO::ATTR_PERSISTENT => true,// UNTUK MEMBUAT KONEKSI DATABASE KITA TERJAGA TERUS
-				PDO::ATTR_ERRORMODE => PDO::ERRMODE_EXCEPTION
+				PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
 			];
 
 			try { 
