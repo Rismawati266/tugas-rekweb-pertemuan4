@@ -1,8 +1,8 @@
 <?php 
 
 class Mahasiswa_model {
-		private $dbh; // database handler->buat menampung koneksi ke database
-		private $stmt; // buat menyimpan query
+		// private $dbh; // database handler->buat menampung koneksi ke database
+		// private $stmt; // buat menyimpan query
 
 		public function __construct() { // koneksi ke database
 			// koneksi dulu ke database

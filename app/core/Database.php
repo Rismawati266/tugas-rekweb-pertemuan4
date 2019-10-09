@@ -9,4 +9,8 @@
 		// variabel untuk koneksinya
 		private $dbh;
 		private $stmt;
+
+		public function __construct() { // berisi koneksi ke database
+
+		}
 	}
