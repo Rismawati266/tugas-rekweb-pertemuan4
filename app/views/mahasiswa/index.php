@@ -4,14 +4,13 @@
 		<div class="col-6">
 			<h3>Daftar Mahasiswa</h3>
 
+			<ul class="list-group">
 				<?php foreach( $data['mhs'] as $mhs ) : ?>
-					<ul>
-						<li><?= $mhs['nama']; ?></li>
-						<li><?= $mhs['nrp']; ?></li>
-						<li><?= $mhs['email']; ?></li>
-						<li><?= $mhs['jurusan']; ?></li>
-					</ul>
-				<?php endforeach; ?>
+  				<li class="list-group-item">
+  					<?= $mhs['nama']; ?></li>
+  				<?php endforeach; ?>
+			</ul>
+
 		</div>
 	</div>
 	
