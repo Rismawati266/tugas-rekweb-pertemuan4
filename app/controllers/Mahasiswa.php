@@ -1,6 +1,6 @@
 <?php 
 
-	class Mahasiswa {
+	class Mahasiswa extends Controller {
 		public function index() {
 			$data['judul'] = "Daftar Mahasiswa";
 			$this->view('templates/header', $data);
