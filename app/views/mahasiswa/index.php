@@ -7,7 +7,9 @@
 			<ul class="list-group">
 				<?php foreach( $data['mhs'] as $mhs ) : ?>
   				<li class="list-group-item">
-  					<?= $mhs['nama']; ?></li>
+  					<?= $mhs['nama']; ?>
+  					<a href="" class="badge badge-danger">Detail</a>
+  				</li>
   				<?php endforeach; ?>
 			</ul>
 
