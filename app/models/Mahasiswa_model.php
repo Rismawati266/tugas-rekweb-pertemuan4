@@ -24,9 +24,8 @@ class Mahasiswa_model {
 
 
 	public function getAllMahasiswa() {
-		$this->stmt = $this->dbh->prepare('SELECT * FROM mahasiswa'); // untuk mendapatkan semua data mahasiswa
-		$this->stmt->execute();
-		return $this->stmt->fetchAll(PDO::FETCH_ASSOC); // kita ambil semua datanya
+		$this->db->query(' SELECT * FROM ' . $tis->table);
+		return $this->db->resultSet(); // tampilkan semua datanya
 	}
 
 }
