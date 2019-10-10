@@ -41,4 +41,8 @@
 			}
 		}
 
+		public function getubah() {
+			echo $_POST['id'];
+		}
+
 	}
