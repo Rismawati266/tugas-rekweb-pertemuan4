@@ -18,7 +18,7 @@
   				<li class="list-group-item">
   					<?= $mhs['nama']; ?>
   					<a href="<?= BASEURL; ?>/mahasiswa/hapus/<?= $mhs['id']; ?>" class="badge badge-danger float-right ml-2" onclick="return confirm('Yakin?');">Hapus</a>
-  					<a href="<?= BASEURL; ?>/mahasiswa/ubah/<?= $mhs['id']; ?>" class="badge badge-success float-right ml-2" data-toggle="modal" data-target="#formModal">Ubah</a>
+  					<a href="<?= BASEURL; ?>/mahasiswa/ubah/<?= $mhs['id']; ?>" class="badge badge-success float-right ml-2 tampilModalUbah" data-toggle="modal" data-target="#formModal">Ubah</a>
   					<a href="<?= BASEURL; ?>/mahasiswa/detail/<?= $mhs['id']; ?>" class="badge badge-warning float-right ml-2">Detail</a>
   				</li>
   				<?php endforeach; ?>
