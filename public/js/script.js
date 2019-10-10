@@ -18,7 +18,11 @@ $(function() {
 			method: 'post',
 			
 			success: function(data) {
-				console.log(data);
+
+				$('#nama').val(data.nama);
+				$('#nrp').val(data.nrp);
+				$('#email').val(data.email);
+				$('#jurusan').val(data.jurusan);
 
 			}
 		});
