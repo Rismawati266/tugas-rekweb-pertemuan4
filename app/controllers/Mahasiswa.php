@@ -42,7 +42,7 @@
 		}
 
 		public function getubah() {
-			echo $_POST['id'];
+			$this->model('Mahasiswa_model')->getDataUbah($_POST['id']);
 		}
 
 	}

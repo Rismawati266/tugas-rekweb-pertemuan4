@@ -13,7 +13,7 @@ $(function() {
 		const id = $(this).data('id');
 
 		$.ajax({
-			url: 'http://localhost/tugas-rekweb-pertemuan4/public/mahasiswa/getubah',
+			url: 'http://localhost:8080/tugas-rekweb-pertemuan4/public/mahasiswa/getubah',
 			data: {id : id},
 			method: 'post',
 			
