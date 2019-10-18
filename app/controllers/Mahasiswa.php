@@ -41,13 +41,13 @@
 			}
 		}
 
-		public function getubah() {
-			echo json_encode($this->model('Mahasiswa_model')->getMahasiswaById($_POST['id']));
+		public function getUbah() {
+			echo json_encode($this->Model('Mahasiswa_model')->getMahasiswaById($_POST['id']));
 		}
 
 		public function ubah() {
-				if( $this->model('Mahasiswa_model')->ubahDataMahasiswa($_POST) > 0 ) {
-				Flasher::setFlash('berhasil', 'ditubah', 'success');
+			if( $this->model('Mahasiswa_model')->ubahDataMahasiswa($_POST) > 0 ) {
+				Flasher::setFlash('berhasil', 'diubah', 'success');
 				header('Location: ' . BASEURL . '/mahasiswa');
 				exit;
 			} else {

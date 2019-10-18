@@ -24,12 +24,12 @@ class Mahasiswa_model {
 
 
 	public function getAllMahasiswa() {
-		$this->db->query(' SELECT * FROM ' . $this->table);
+		$this->db->query('SELECT * FROM ' . $this->table);
 		return $this->db->resultSet(); // tampilkan semua datanya
 	}
 
 	public function getMahasiswaById($id) {
-		$this->db->query(' SELECT * FROM ' . $this->table . ' WHERE id=:id');
+		$this->db->query('SELECT * FROM ' . $this->table . ' WHERE id=:id');
 		$this->db->bind('id', $id);
 		return $this->db->single();
 	}
@@ -60,13 +60,13 @@ class Mahasiswa_model {
 		return $this->db->rowCount();
 	}
 
-		public function ubahDataMahasiswa($data) {
+	public function ubahDataMahasiswa($data) {
 		$query = "UPDATE mahasiswa SET
 					nama = :nama,
 					nrp = :nrp,
 					email = :email,
 					jurusan = :jurusan
-				WHERE id = : id";
+				WHERE id = :id";
 
 		$this->db->query($query);
 		$this->db->bind('nama', $data['nama']);

@@ -12,7 +12,7 @@
 
 		public function __construct() { // berisi koneksi ke database
 			// data source name
-			$dsn = 'mysql:host=' . $this->host . ';dbname=' . $this->db_name;// identitas server kita -> data source name
+			$dsn = 'mysql:host=' . $this->host . ';dbname=' . $this->db_name;
 
 			// $option -> mengoptimasi koneksi ke database kita
 			$option = [
@@ -21,7 +21,7 @@
 			];
 
 			try { 
-				$this->dbh = new PDO($dsn, $this->user, $this->pass, $option);
+				$this->dbh = new PDO($dsn, 'root', '');
 			} catch(PDOException $e) { 
 				die($e->getMessage()); 
 			}
